@@ -1,0 +1,49 @@
+@{
+    ViewData["Title"] = "Calculator";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<div class="container mt-5 text-center">
+    <h1>Personal Training Calculator</h1>
+    <p>Find out how much it will cost to teach you how to be your best you!</p>
+    
+    <div class="form-group">
+        <label for="hours">Number of Hours:</label>
+        <input type="number" id="hours" class="form-control" min="1" placeholder="Enter hours" required>
+    </div>
+    
+    <div class="form-group">
+        <label for="rate">Hourly Rate:</label>
+        <input type="text" id="rate" class="form-control" value="30" readonly>
+    </div>
+    
+    <button id="calculate" class="btn btn-primary mt-3">Calculate Total</button>
+    
+    <div class="form-group mt-3">
+        <label for="total">Total Cost:</label>
+        <input type="text" id="total" class="form-control" readonly>
+    </div>
+    
+    <a asp-controller="Home" asp-action="Index" class="btn btn-secondary mt-3">Back to Home</a>
+</div>
+
+<script src="~/lib/jquery/dist/jquery.min.js"></script>
+
+<script>
+    $(document).ready(function () {
+        $("#calculate").click(function () {
+            let hours = parseFloat($("#hours").val());
+            let rate = parseFloat($("#rate").val());
+            
+            if (isNaN(hours) || hours <= 0) {
+                alert("Please enter a valid number of hours.");
+                return;
+            }
+            
+            let total = hours * rate;
+            $("#total").val("$" + total.toFixed(2));
+        });
+    });
+</script>
+

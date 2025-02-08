@@ -1,7 +1,8 @@
-﻿@{
+﻿<!--Shared layout-->
+@{
     ViewData["Title"] = "Home Page";
 }
-
+<!--Title and why I like working out-->
 <div class="text-center">
     <h1 class="display-4">Be the Best You!</h1>
     <p>Going to the gym can improve your health, build muscle, and boost your confidence.</p>
@@ -19,7 +20,8 @@
             </div>
         </div>
     </div>
-
+    
+    <!-- Push Day-->
     <div class="container text-center">
         <h2 class="mb-4">Day 1: Push - Chest/Triceps/Shoulders</h2>
         <div class="row align-items-center">
@@ -34,7 +36,7 @@
             </div>
         </div>
     </div>
-
+    <!-- Pull Day-->
     <div class="container text-center">
         <h2 class="mb-4">Day 2: Pull - Back/Biceps</h2>
         <div class="row align-items-center">
@@ -49,7 +51,7 @@
             </div>
         </div>
     </div>
-
+    <!-- Leg Day-->
     <div class="container text-center">
         <h2 class="mb-4">Day 3: Legs (then repeat)</h2>
         <div class="row align-items-center">
@@ -64,7 +66,7 @@
             </div>
         </div>
     </div>
-
+    <!-- Where to Workout-->
     <div class="container text-center">
         <h2 class="mb-4">Finding What Works for You!</h2>
         <div class="row align-items-center">
@@ -78,5 +80,6 @@
             </div>
         </div>
     </div>
+    <!-- Direct to calculator view-->
     <a asp-controller="Home" asp-action="Calculator" class="btn btn-secondary mt-3">Personal Training Calculator</a>
 </div>

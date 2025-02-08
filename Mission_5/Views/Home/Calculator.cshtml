@@ -1,9 +1,11 @@
+<!-- Import the shared view-->
+
 @{
     ViewData["Title"] = "Calculator";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-
+<!-- Input and calculate personal trainor/tutoring cost-->
 <div class="container mt-5 text-center">
     <h1>Personal Training Calculator</h1>
     <p>Find out how much it will cost to teach you how to be your best you!</p>
@@ -25,11 +27,12 @@
         <input type="text" id="total" class="form-control" readonly>
     </div>
     
+    <!--Back to Home-->
     <a asp-controller="Home" asp-action="Index" class="btn btn-secondary mt-3">Back to Home</a>
 </div>
 
 <script src="~/lib/jquery/dist/jquery.min.js"></script>
-
+<!--Jquery to caluclate the cost-->
 <script>
     $(document).ready(function () {
         $("#calculate").click(function () {
